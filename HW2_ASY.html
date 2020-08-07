@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Salam</title>
+</head>
+<body>
+    <h2>Curren Date</h2>
+    <p>The Current date is :
+        <span class="output" ></span>
+    </p>
+
+    <button onclick="getCurrentDate()">GET DATE </button>
+    <script type="text/javascript">
+        function getCurrentDate(){
+            let dateObj = new Date();
+            let month = String(dateObj.getMonth() + 1).padStart(2, '0');
+            let day =  String(dateObj.getDate()).padStart(2, '0');
+            let year = dateObj.getFullYear();
+            
+            
+            let output = day + '/'+ month + '/' +  year;
+            
+            document.querySelector('.output').textContent = output;
+        }
+    </script>
+    
+    
+</body>
+</html>
